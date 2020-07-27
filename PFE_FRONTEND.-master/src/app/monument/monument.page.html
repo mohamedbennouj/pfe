@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar  color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      {{title}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle color="primary">CasaTourisme</ion-card-subtitle>
+      <ion-card-title>Informations</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Les plages de casablanca sont un lieu magnifique.
+       Le sable est blanc et fin, infiniment doux.
+        Aucunes ordures ne traînent ici, les gens sont respectueux de cet endroit paradisiaque.
+       L'eau est de couleur turquoise, les vagues forment des écumes blanches. 
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card *ngFor="let place of places">
+    <ion-card-header>
+      <ion-card-subtitle color="primary">CasaTourisme</ion-card-subtitle>
+    </ion-card-header>
+    <ion-item routerLink="/all" class="ion-activated">
+      <img src="{{place.image}}" alt="">
+      <ion-label> <h1 style="font-weight:bold ; color: gray; font-style: oblique">&nbsp;{{place.name}}</h1></ion-label>
+    </ion-item>
+  </ion-card>
+</ion-content>
+
